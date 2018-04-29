@@ -17,3 +17,4 @@ rel/example_project
 *.log
 *.lck
 *.bak
+*.lck
