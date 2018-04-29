@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;LearningErlang/src/Test.erlScratchPad&apos; to &apos;Test.erl&apos;" description="Rename resource &apos;Test.erlScratchPad&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Test.erlScratchPad" name="Test.erl" stamp="1524162624056" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;LearningErlang/src/Test.erl&apos; to &apos;test.erl&apos;" description="Rename resource &apos;Test.erl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Test.erl" name="test.erl" stamp="1524162732276" updateReferences="true"/>
-</session>

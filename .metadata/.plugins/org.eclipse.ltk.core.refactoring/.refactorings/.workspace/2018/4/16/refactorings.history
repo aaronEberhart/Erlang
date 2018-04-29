@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;LearningErlang/src/test.erl.erlScratchPad&apos;" deleteContents="false" description="Delete resource &apos;LearningErlang/src/test.erl.erlScratchPad&apos;" element1="/LearningErlang/src/test.erl.erlScratchPad" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1524161317500"/>
-</session>

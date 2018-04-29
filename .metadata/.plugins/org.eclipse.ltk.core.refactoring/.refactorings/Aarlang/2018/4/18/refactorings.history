@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Move &apos;util.erl&apos; to &apos;include&apos;" description="Move &apos;util.erl&apos; to &apos;include&apos;" destination="include" element1="src/util.erl" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1525012331576" updateReferences="true"/>&#x0A;<refactoring comment="Move &apos;util.erl&apos; to &apos;src&apos;" description="Move &apos;util.erl&apos; to &apos;src&apos;" destination="src" element1="include/util.erl" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1525012412787" updateReferences="true"/>
-</session>
