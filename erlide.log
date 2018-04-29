@@ -1,0 +1,27 @@
+10:29:25,217 I: (ErlangCore.java:63) : Starting CORE Thread[main,6,main]
+10:29:25,233 I: (ErlangCore.java:73) : *** starting Erlide v0.54.0.201803300918~0.54.0.201803211709 (model api=0.54.0.201803211709) (kernel=?~0.115.1.201707181335) *** (UTF-8)
+10:29:25,233 I: (ErlangCore.java:80) : Started CORE
+10:29:25,233 F: (ErlangPlugin.java:89) : Core started
+10:30:33,575 F: (BackendFactory.java:47) : Create build backend 20
+10:30:33,576 F: (BackendFactory.java:54) : Create backend 20_abd8_aaron_cffd68
+10:30:33,578 F: (OtpNodeProxy.java:306) : Runtime 20_abd8_aaron_cffd68@127.0.0.1 starting
+10:30:33,579 F: (OtpNodeProxy.java:426) : START node :> ["c:\program files\erl9.3/bin/erl", -name, 20_abd8_aaron_cffd68@127.0.0.1, -setcookie, erlide] *** C:\Users\aaron\Erlang
+10:30:33,586 F: (OtpNodeProxy.java:213) : 20_abd8_aaron_cffd68@127.0.0.1: waiting connection to peer... 
+10:30:34,007 F: (OtpNodeProxy.java:220) : connected!
+10:30:34,233 F: (OtpNodeProxy.java:311) : Runtime 20_abd8_aaron_cffd68@127.0.0.1 running
+10:30:34,234 F: (LogEventHandler.java:27) : info: {"Monitoring java node",'jerlide_1cffd6f@127.0.0.1'}
+10:30:34,234 F: (LogEventHandler.java:27) : info: {"Start monitor process: ",10000000,50000000}
+10:32:14,736 F: (BackendManager.java:87) : create execution backend Aarlang
+10:32:14,736 F: (BackendFactory.java:54) : Create backend Aarlang
+10:32:14,737 F: (OtpNodeProxy.java:306) : Runtime Aarlang@Aaron starting
+10:32:14,738 F: (OtpNodeProxy.java:426) : START node :> ["c:\program files\erl9.3/bin/erl", -sname, Aarlang@Aaron, -setcookie, erlide] *** C:\Users\aaron\Erlang
+10:32:14,757 F: (OtpNodeProxy.java:213) : Aarlang@Aaron: waiting connection to peer... 
+10:32:15,197 F: (OtpNodeProxy.java:220) : connected!
+10:32:15,298 F: (OtpNodeProxy.java:311) : Runtime Aarlang@Aaron running
+10:32:15,431 F: (LogEventHandler.java:27) : info: {"Monitoring java node",jerlide_1d188a3@Aaron}
+10:32:15,431 F: (LogEventHandler.java:27) : info: {"Start monitor process: ",10000000,50000000}
+10:32:15,799 F: (ErlConsoleManager.java:51) : console ADDED to org.erlide.backend.api.BackendData@6d84e1ab
+10:32:15,988 F: (ErlangLaunchDelegate.java:111) : Started erts: Aarlang >> Aarlang
+10:32:21,997 F: (AbstractErlContentAssistProcessor.java:159) : no results
+10:33:32,970 F: (InternalBuilder.java:206) : Will compile 1 resource(s)
+10:33:33,545 F: (BuilderHelper.java:554) : :: loading util in Aarlang@Aaron

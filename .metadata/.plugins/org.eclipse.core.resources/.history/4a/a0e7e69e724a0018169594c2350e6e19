@@ -1,0 +1,76 @@
+%% @author Aaron Eberhart
+%% @doc @todo Add description to util.
+-module(util).
+-author("Aaron Eberhart").
+
+%% ====================================================================
+%% API functions
+%% ====================================================================
+-export([map/2,filter/2,readFile/1,writeToFile/2,appendToFile/2,conflattenateStrings/1,cwd/0]).
+
+map(_, []) -> [];
+map(Function,[Head|Tail]) -> [Function(Head)|map(Function,Tail)].
+
+filter(_,[]) -> [];
+filter(Function,[Head|Tail]) ->
+	case Function(Head) of
+		true -> [Head|filter(Function,Tail)];
+		false -> [filter(Function,Tail)]
+	end.
+
+readFile(Filename) ->
+	case filelib:is_file(cwd()++Filename) of
+		true -> {ok,FileID} = file:open(cwd()++Filename, read),readUntilDone(FileID,"");
+		_ -> {false,"File Error"}
+	end.
+
+writeToFile(Filename,Data) ->
+	case not filelib:is_file(cwd()++Filename) of
+		true -> {ok,FileID} = file:open(cwd()++Filename, write),
+				io:format(FileID,"~s",[dataFormat(Data)]),
+				file:close(FileID),{true,"Success"};
+		_ -> {false,"File Error"}
+	end.
+
+appendToFile(Filename,Data) ->
+	case filelib:is_file(cwd()++Filename) of
+		true -> Text = readFile(Filename),file:delete(Filename),
+				writeToFile(Filename,io_lib:format("~s~n~s",[Text,dataFormat(Data)]));
+		_ -> {false,"File Error"}
+	end.
+
+conflattenateStrings([]) -> "";
+conflattenateStrings(List) -> lists:flatten(strListAppend(List)).
+%% ====================================================================
+%% Internal functions
+%% ====================================================================
+cwd() -> {ok,Dir} = file:get_cwd(),Dir++"\/".
+
+readUntilDone(FileID,Contents) ->
+	case Line = io:get_line(FileID,'') of
+		eof -> file:close(FileID),Contents;
+		_ -> readUntilDone(FileID,Contents++Line)
+	end.
+
+strListAppend([]) -> false;
+strListAppend([Head|Tail]) ->
+	case Str = strListAppend(Tail) of
+		false -> io_lib:format("~s",[Head]);
+		_ -> case Head =:= io_lib:format("~n",[]) of
+				true -> io_lib:format("~s~s",[Head,Str]);
+				_ -> case Head =:= "" of
+					true -> io_lib:format("~s~s",[Head,Str]);
+					_ -> io_lib:format("~s ~s",[Head,Str])
+				end
+			end
+	end.
+
+dataFormat(Data) when is_float(Data) -> io_lib:format("~8f",[Data]);
+dataFormat(Data) when is_list(Data) ->
+	case io_lib:printable_list(Data) of  
+		false -> List = map(fun dataFormat/1,Data),
+				String = conflattenateStrings(List),
+				lists:flatten(io_lib:format("~s",[String]));
+		true -> io_lib:format("~s",[Data])
+	end;
+dataFormat(Data) -> io_lib:format("~w",[Data]).
