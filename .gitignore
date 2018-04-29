@@ -18,3 +18,5 @@ rel/example_project
 *.lck
 *.bak
 *.lck
+
+erlide.log.lck
