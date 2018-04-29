@@ -11,4 +11,6 @@ rel/example_project
 *.txt
 .gitignore
 .gitattributes
-*.metadata
+.metadata
+.settings/
+*.rar
