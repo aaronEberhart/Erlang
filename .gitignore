@@ -14,3 +14,6 @@ rel/example_project
 .metadata
 .settings/
 *.rar
+*.log
+*.lck
+*.bak
