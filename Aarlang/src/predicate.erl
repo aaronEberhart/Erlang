@@ -1,4 +1,4 @@
-%% @author aaron
+% @author aaron
 %% @doc @todo Add description to 'Predicate'.
 
 -module('predicate').
