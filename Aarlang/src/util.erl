@@ -75,7 +75,6 @@ cwd() -> {ok,Dir} = file:get_cwd(),Dir++"\/".
 %% ====================================================================
 %% Internal functions
 %% ====================================================================
-
 readUntilDone(FileID,Contents) ->
 	case Line = io:get_line(FileID,'') of
 		eof -> file:close(FileID),Contents;
